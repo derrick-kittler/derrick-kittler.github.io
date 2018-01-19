@@ -17,7 +17,7 @@ github_username:  derrick-kittler
 # Build settings
 markdown: kramdown
 # theme: minima
-remote_theme: "mmistakes/minimal-mistakes"
+# remote_theme: "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-feed
 
