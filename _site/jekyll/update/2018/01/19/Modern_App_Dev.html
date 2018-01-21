@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Modern Application Development: Should you skip microservices and go directly to serverless?</title>
+  <meta name="description" content="You don’t have to look further than the Gartner Hype Cycle to see the staggering pace of innovation in application architecture. Microservices, reactive prog...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/jekyll/update/2018/01/19/Modern_App_Dev.html">
+  <link rel="alternate" type="application/rss+xml" title="Software Architecture Blog" href="/feed.xml">
+  
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Software Architecture Blog</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Modern Application Development: Should you skip microservices and go directly to serverless?</h1>
+    <p class="post-meta">
+      <time datetime="2018-01-19T11:16:01-05:00" itemprop="datePublished">
+        
+        Jan 19, 2018
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>You don’t have to look further than the Gartner Hype Cycle to see the staggering pace of innovation in application architecture. Microservices, reactive programming, and container management are among the architectural models at the peak of the Cycle, making deep scrutiny a must as you consider the systems, processes, and tool choices for modern application development. And while it’s not entirely unheard of to skip a generation of technology and jump headfirst into the latest shiny object, doing so often comes with significant risk. It’s not quite the same as a strong advancement in the game of Monopoly. So if you’re wondering if you should skip microservices and go directly to serverless, here’s some food for thought.
+Recently,function-as-as-service (FaaS) and serverless technologies like AWS Lambda have captured our imaginations with the promise to run idempotent units of functionality at scale on someone else’s infrastructure. In some ways, it represents one of the largest technology unicorns in the land.</p>
+
+<p>It’s not all rainbows and butterflies
+Serverless architectures leverage the elastic compute capacity of an underlying infrastructure to provide ephemeral and idempotent functions (e.g. file handling, data transformation, system integration, single-sign-on, etc.) that can be invoked directly by business applications. These services/functions are considered an easy method to implement ‘pay-as-you-go’ event-driven, stateless microservices. Further, serverless architectures promote the ability to reduce many core IT responsibilities such as patching and maintaining servers, networking, scaling of services, etc. Problems can arise however, when trying to understand the appropriate service to use for a given problem; architectural governance and standards are now more dependant on partner relationships and not in the firm control of the service consumer or enterprise IT.</p>
+
+<p>A quick history lesson
+Serverless and FaaS has its foundation in functional programming. Recall, functional programming originates from concepts developed in the 1930s with Lambda Calculus. It’s rooted in function definition, function abstraction and the usage of variables for function application. We didn’t see much from functional programming until the 1960s, when Common Lisp became the first functional programming language. Since then, functional programming evolved and many popular languages of today have support for functional programming concepts including JavaScript, Python, C# and even Java.
+When considering the idempotent and stateless nature of functions, you can see why functional programming has strong relevance to microservice-based cloud-native application development. Taking it a step further, a cloud-native application can easily leverage a function call to a FaaS or serverless environment to perform a number of activities, such as processing a customer login event, computing an analytic, or evaluating a decision. And it can do it all while never having to be concerned with the underlying function scale, security, maintenance or performance (kinda cool). Having said that, there is some level of lock-in with Google Cloud functions, Microsoft Azure Functions, Amazon Lambda, Oracle Functions, VMWare Functions, etc. due to their pervasive coupling on underlying and supporting dependant services. This coupling and chaining of services at scale must be considered as part of an enterprise serverless strategy and governance model to ensure application portability and overall cost of ownership.</p>
+
+<p>The hidden costs of serverless architectures
+While many of the core technologies and architecture styles that support cloud-native development are readily available today, adopting them wholesale may come with a significant cost. Serverless architectures come with hard and soft costs that may not be immediately obvious. Hard costs may include added network latency and difficulty in troubleshooting a business transaction through a distributed service mesh. Soft costs include the technical team competency needed for managing high levels of complexity, as well as the overall application and service portability (cost of migration from one serverless platform/vendor to another).</p>
+
+<p>Providing guardrails, not gates
+Red Hat understands the serverless and FaaS landscape as a forest of promise not without its hidden monsters. That said, we are working with communities to implement new technologies that provide guardrails and not gates. We want enterprise development teams to have the freedom to innovate at full speed but without compromising on built-in, enterprise-required controls such as security, stability and governance. An example of this approach is with Red Hat OpenShift Application Runtimes (RHOAR), which is a collection of application development runtimes and languages that support cloud-native, microservice-based development and includes a path to serverless architectures. RHOAR, along with the OpenShift Container Management Platform, will in time include core technologies that enable serverless architectures for private, hybrid and multi-cloud deployments. Leveraging the Red Hat approach to serverless architectures allows an enterprise to fully own, manage and govern their services at scale and across cloud providers to quickly build, run and maintain cloud-native applications.</p>
+
+<p>While skipping an evolution to microservices and jumping right to the unicorn-serverless-world may sound appealing, the approach doesn’t come without significant risk. As with all evolution, incremental steps of improvement that are well understood and illustrate environmental adaptations are the most successful and sustainable. That said, moving from big monoliths to fast-moving monoliths, from microservices to serverless is, perhaps, the most successful approach that enterprise IT teams should adopt. It’s a better than keeping your fingers crossed that you’ll roll the dice, pass GO and collect $200.</p>
+
+  </div>
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Software Architecture Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Software Architecture Blog
+            
+            </li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/derrick-kittler"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">derrick-kittler</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/derrick_kittler"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">derrick_kittler</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Pontifications on all things architecture within the context of Enterprise IT. Thoughs from Chief Architect who spends his time with many of Red Hat&#39;s customers in the Northeast USA.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
