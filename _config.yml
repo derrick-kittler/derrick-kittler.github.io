@@ -21,9 +21,7 @@
 title: DK Blog
 #email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-Thoughts on what conversations I have in the field as a Chief Architect
-at RedHat. My writings are not the thoughts or opinions of RedHat but rather
-my 20-odd years of experinece in software development and enterprise architecture.
+Thoughts on conversations I have as a Chief Architect at RedHat. My writings are not the thoughts or opinions of RedHat but rather my 20-odd years of experinece in software development and enterprise architecture.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: derrick_kittler
