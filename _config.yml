@@ -13,12 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Software Architecture Blog
+title: DK Blog
 #email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Pontifications on all things architecture within the context of
-  Enterprise IT. Thoughs from Chief Architect who spends his time
-  with many of Red Hat's customers in the Northeast USA.
+Derrick Kittler is a Chief Architect with <a href="http://www.redhat.com/">RedHat</a>,
+<a href="http://www.ironman.com/">Ironman</a> and endurance sports
+competitor and family-man living in Northeast US. Derrick has a keen interest
+in distributed architectures with a focus on data-driven/intelligent applications and
+the evolution of traditional data management and analytics.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: derrick_kittler

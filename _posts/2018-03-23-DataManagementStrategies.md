@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Microservices are great for all-the-things but what about the data"
-date:   2018-04-20 10:16:01 -0600
+date:   2018-03-23 10:16:01 -0600
 comments: true
 categories: jekyll update
 ---
